@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://172.20.131.205/SFISWS/SFIS_WS.asmx?WSDL" uri="xml-resources/web-service-references/SFIS_WS/wsdl/172.20.131.205/SFISWS/SFIS_WS.asmx.wsdl"/>
+    <system systemId="file:/C:/Users/MFG.ESOP/Documents/NetBeansProjects/WebServiceLibrary/src/Service.wsdl" uri="xml-resources/web-service-references/Service/wsdl/Service.wsdl"/>
+</catalog>
