@@ -19,10 +19,10 @@ public class AtmcEmployeeUtils {
     
     private final String CHARSET = "UTF-8";
     
-    @Value("${atmc.employee.userQry.url}")
+    @Value("${atmc.employee.userQry.url:}")
     private String userQryUrl;
     
-    @Value("${atmc.employee.userLogin.url}")
+    @Value("${atmc.employee.userLogin.url:}")
     private String userLoginUrl;
 
     public String getUser(String jobnumber) throws Exception {

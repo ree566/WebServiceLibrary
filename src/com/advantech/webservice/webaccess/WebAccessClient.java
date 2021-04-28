@@ -8,8 +8,6 @@ package com.advantech.webservice.webaccess;
 import java.util.Arrays;
 import java.util.Map;
 import org.apache.commons.codec.binary.Base64;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -22,20 +20,22 @@ import org.springframework.web.client.RestTemplate;
  *
  * @author MFG.ESOP
  */
-@Component
 public class WebAccessClient {
 
-    @Value("${webaccess.webservice.url}")
+    @Value("${webaccess.webservice.url:}")
     private String serviceUrl;
 
-    @Value("${webaccess.webservice.account}")
+    @Value("${webaccess.webservice.account:}")
     private String serviceLoginAcc;
 
-    @Value("${webaccess.webservice.password}")
+    @Value("${webaccess.webservice.password:}")
     private String serviceLoginPsw;
 
-    @Autowired
     private RestTemplate restTemplate;
+    
+    public WebAccessClient(RestTemplate restTemplate){
+        this.restTemplate = restTemplate;
+    }
 
     private HttpHeaders getHeaders() {
         String plainCredentials = serviceLoginAcc + ":" + serviceLoginPsw;
